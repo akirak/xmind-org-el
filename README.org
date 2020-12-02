@@ -3,6 +3,9 @@ This is a small Emacs package for importing [[https://www.xmind.net/][XMind]] mi
 It was created to produce a skill list from [[https://github.com/ivan-kleshnin/frontend-mindmaps][Frontend / React Developer Mindmaps]], and only minimal presentation features are supported for now.
 
 #+BEGIN_HTML
+<a href="https://github.com/akirak/xmind-org-el/actions?query=workflow%3ACI">
+<img src="https://github.com/akirak/xmind-org-el/workflows/CI/badge.svg" alt="CI">
+</a>
 #+END_HTML
 
 ** Usage
