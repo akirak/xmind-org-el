@@ -1,0 +1,9 @@
+* xmind-org.el
+This is a small Emacs package for importing [[https://www.xmind.net/][XMind]] mindmap files into Org mode.
+It was created to produce a skill list from [[https://github.com/ivan-kleshnin/frontend-mindmaps][Frontend / React Developer Mindmaps]], and only minimal presentation features are supported for now.
+
+#+BEGIN_HTML
+#+END_HTML
+
+** Usage
+In a =org-mode= buffer, run =xmind-org-insert-file= and specify a mindmap file (=*.xmind=). The outlines of its first sheet will be imported into the buffer.
