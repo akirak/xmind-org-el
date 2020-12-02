@@ -1,0 +1,27 @@
+name: 'CI'
+on:
+  pull_request:
+  push:
+    branches:
+    - master
+    paths-ignore:
+    - '**.md'
+    - '**.org'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        nixpkgs_channel:
+        - nixos-20.03-small
+        - nixos-20.09-small
+        - nixos-unstable-small
+    steps:
+    - uses: cachix/install-nix-action@v12
+      with:
+        nix_path: nixpkgs=channel:${{ matrix.nixpkgs_channel }}
+    - uses: actions/checkout@v2
+    - uses: akirak/elinter@v4
+    - run: |
+        curl -OL https://github.com/ivan-kleshnin/frontend-mindmaps/raw/master/middle.xmind
+    - run: elinter -t --buttercup -e all
