@@ -10,3 +10,9 @@ It was created to produce a skill list from [[https://github.com/ivan-kleshnin/f
 
 ** Usage
 In a =org-mode= buffer, run =xmind-org-insert-file= and specify a mindmap file (=*.xmind=). The outlines of its first sheet will be imported into the buffer.
+
+Below is an example where [[https://github.com/ivan-kleshnin/frontend-mindmaps][the middle frontend developer roadmap]] is converted into Org:
+
+[[https://raw.githubusercontent.com/ivan-kleshnin/frontend-mindmaps/master/middle.png][https://raw.githubusercontent.com/ivan-kleshnin/frontend-mindmaps/master/middle.png]]
+
+[[file:screenshot.svg][screenshot.svg]]
