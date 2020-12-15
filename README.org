@@ -6,8 +6,16 @@ It was created to produce a skill list from [[https://github.com/ivan-kleshnin/f
 <a href="https://github.com/akirak/xmind-org-el/actions?query=workflow%3ACI">
 <img src="https://github.com/akirak/xmind-org-el/workflows/CI/badge.svg" alt="CI">
 </a>
-#+END_HTML
 
+<a href="https://melpa.org/#/xmind-org">
+<img src="https://melpa.org/packages/xmind-org-badge.svg" alt="xmind-org on MELPA">
+</a>
+#+END_HTML
+** Installation
+:PROPERTIES:
+:CREATED_TIME: [2020-12-15 Tue 21:56]
+:END:
+Install =xmind-org= from MELPA.
 ** Usage
 In a =org-mode= buffer, run =xmind-org-insert-file= and specify a mindmap file (=*.xmind=). The outlines of its first sheet will be imported into the buffer.
 
@@ -16,3 +24,5 @@ Below is an example where [[https://github.com/ivan-kleshnin/frontend-mindmaps][
 [[https://raw.githubusercontent.com/ivan-kleshnin/frontend-mindmaps/master/middle.png][https://raw.githubusercontent.com/ivan-kleshnin/frontend-mindmaps/master/middle.png]]
 
 [[file:screenshot.svg][screenshot.svg]]
+** License
+GPL v3
