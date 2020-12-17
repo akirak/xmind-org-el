@@ -1,5 +1,5 @@
 * xmind-org.el
-This is a small Emacs package for importing [[https://www.xmind.net/][XMind]] mindmap files into Org mode.
+This is a small Emacs package for importing [[https://www.xmind.net/][XMind]] mindmap files to Org mode.
 It was created to produce a skill list from [[https://github.com/ivan-kleshnin/frontend-mindmaps][Frontend / React Developer Mindmaps]], and only minimal presentation features are supported for now.
 
 #+BEGIN_HTML
@@ -17,7 +17,7 @@ It was created to produce a skill list from [[https://github.com/ivan-kleshnin/f
 :END:
 Install =xmind-org= from MELPA.
 ** Usage
-In a =org-mode= buffer, run =xmind-org-insert-file= and specify a mindmap file (=*.xmind=). The outlines of its first sheet will be imported into the buffer.
+In an =org-mode= buffer, run =xmind-org-insert-file= and select a mindmap file (=*.xmind=). The outlines of its first sheet will be imported into the buffer.
 
 Below is an example where [[https://github.com/ivan-kleshnin/frontend-mindmaps][the middle frontend developer roadmap]] is converted into Org:
 
