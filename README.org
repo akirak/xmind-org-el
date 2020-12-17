@@ -24,5 +24,7 @@ Below is an example where [[https://github.com/ivan-kleshnin/frontend-mindmaps][
 [[https://raw.githubusercontent.com/ivan-kleshnin/frontend-mindmaps/master/middle.png][https://raw.githubusercontent.com/ivan-kleshnin/frontend-mindmaps/master/middle.png]]
 
 [[file:screenshot.svg][screenshot.svg]]
+** Contribution
+If you need support for more properties in XMind mindmap files, please feel free to file an issue with an example file.
 ** License
 GPL v3
