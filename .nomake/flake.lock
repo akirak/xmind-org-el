@@ -1,0 +1,95 @@
+{
+  "nodes": {
+    "buttercup": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1660513857,
+        "narHash": "sha256-hOi6NUY/seKhBA32X1PhP+O+Q1PVyfeoB2BB7i2C1fc=",
+        "owner": "jorgenschaefer",
+        "repo": "emacs-buttercup",
+        "rev": "e2b77ac49cc61c32566f22b84ba304a5703ff7b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jorgenschaefer",
+        "repo": "emacs-buttercup",
+        "type": "github"
+      }
+    },
+    "dash": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1654716693,
+        "narHash": "sha256-ggJV5lX2F5T4FajFX8h3hT7YPZ2F11HDDeV9va8bJVI=",
+        "owner": "magnars",
+        "repo": "dash.el",
+        "rev": "0ac1ecf6b56eb67bb81a3cf70f8d4354b5782341",
+        "type": "github"
+      },
+      "original": {
+        "owner": "magnars",
+        "repo": "dash.el",
+        "type": "github"
+      }
+    },
+    "org-ml": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1657553317,
+        "narHash": "sha256-N8HdBql05TX2wV+tSos8A2XW7goEPEXSj8k9Oi41oEg=",
+        "owner": "ndwarshuis",
+        "repo": "org-ml",
+        "rev": "385e3bee497f858705144d7ab5e6570d31d3ffe8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ndwarshuis",
+        "repo": "org-ml",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "buttercup": "buttercup",
+        "dash": "dash",
+        "org-ml": "org-ml",
+        "s": "s",
+        "xmind-org": "xmind-org"
+      }
+    },
+    "s": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1662132008,
+        "narHash": "sha256-rB+b9Z2KISHwYIgXm2g2EX/EUpA9NWDFfuzrj93dzAc=",
+        "owner": "magnars",
+        "repo": "s.el",
+        "rev": "e957dcb0677da18b2bb60ad867db5df5c35b5616",
+        "type": "github"
+      },
+      "original": {
+        "owner": "magnars",
+        "repo": "s.el",
+        "type": "github"
+      }
+    },
+    "xmind-org": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1662555546,
+        "narHash": "sha256-hR3AV4gs0DDfQs98V37LlpUj/AfqCzqZRDP+bcKEc20=",
+        "owner": "akirak",
+        "repo": "xmind-org-el",
+        "rev": "94fedfd851fd6a3698be921562022491558fae4a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "akirak",
+        "repo": "xmind-org-el",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
