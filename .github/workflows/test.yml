@@ -11,6 +11,7 @@ jobs:
       matrix:
         emacs_version: ["snapshot"]
     steps:
+    - uses: cachix/install-nix-action@v17
     - uses: purcell/setup-emacs@master
       with:
         version: ${{ matrix.emacs_version }}
