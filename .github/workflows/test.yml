@@ -1,27 +1,52 @@
-name: 'CI'
+name: Lint and test
 on:
-  pull_request:
   push:
-    branches:
-    - master
-    paths-ignore:
-    - '**.md'
-    - '**.org'
+    paths:
+      - '**.el'
+  workflow_dispatch:
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        nixpkgs_channel:
-        - nixos-20.03-small
-        - nixos-20.09-small
-        - nixos-unstable-small
+        emacs_version: ["snapshot"]
     steps:
-    - uses: cachix/install-nix-action@v12
+    - uses: purcell/setup-emacs@master
       with:
-        nix_path: nixpkgs=channel:${{ matrix.nixpkgs_channel }}
-    - uses: actions/checkout@v2
-    - uses: akirak/elinter@v4
+        version: ${{ matrix.emacs_version }}
+    - uses: actions/checkout@v3
+    - name: Install dependencies
+      run: |
+        cat <(jq -r '.nodes.root.inputs | map(.) | .[]' .nomake/flake.lock) \
+            <(jq -r 'keys | .[]' .nomake/archive.lock) \
+            <(echo 'package-lint') \
+            | xargs emacs -batch -l package --eval \
+            "(progn
+                (push '(\"melpa\" . \"https://melpa.org/packages/\")
+                      package-archives)
+                (package-initialize)
+                (when command-line-args-left
+                  (package-refresh-contents))
+                (dolist (package-name command-line-args-left)
+                  (let ((package (intern package-name)))
+                     (when (and package
+                                (not (memq package
+                                           '(xmind-org))))
+                       (package-install (cadr (assq package 
+                                                    package-archive-contents)))))))"
+    - name: Byte-compile
+      if: ${{ false }}
+      run: |
+        emacs -batch -l bytecomp -l package --eval "(push '(\"melpa\" . \"https://melpa.org/packages/\") package-archives)" --eval "(package-initialize)" -L . \
+          --eval "(setq byte-compile-error-on-warn t)" \
+          -f batch-byte-compile 'xmind-org.el'
     - run: |
+        emacs -l package --eval "(push '(\"melpa\" . \"https://melpa.org/packages/\") package-archives)" --eval "(package-initialize)" -L . -batch -l package-lint \
+          --eval "(setq package-lint-main-file \"xmind-org.el\")" \
+          -f package-lint-batch-and-exit 'xmind-org.el'
+      name: Run package-lint
+
+    - name: Download test data
+      run: |
         curl -OL https://github.com/ivan-kleshnin/frontend-mindmaps/raw/master/middle.xmind
-    - run: elinter -t --buttercup -e all
+    - run: nix run .#test
