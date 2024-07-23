@@ -3,7 +3,7 @@
 ;; Copyright (C) 2020,2022,2024 Akira Komamura
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
-;; Version: 0.1
+;; Version: 0.1.1
 ;; Package-Requires: ((emacs "27.1") (org-ml "5.3") (dash "2.12"))
 ;; Keywords: outlines wp files
 ;; URL: https://github.com/akirak/xmind-org-el
