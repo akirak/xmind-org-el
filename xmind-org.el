@@ -51,18 +51,19 @@
 (defun xmind-org-parse-content (file)
   "Parse the content of a mindmap FILE."
   (with-temp-buffer
-    (if (zerop (call-process xmind-org-unzip-command nil
-                             (cons t nil)
-                             nil
-                             "-p"
-                             (convert-standard-filename file)
-                             "content.json"))
-        (progn
-          (goto-char (point-min))
-          (json-parse-buffer :array-type 'list
-                             :object-type 'hash-table
-                             :null-object nil))
-      (error "Failed to unarchive the xmind file"))))
+    (let ((exit (call-process xmind-org-unzip-command nil
+                              (cons t nil)
+                              nil
+                              "-p"
+                              (convert-standard-filename file)
+                              "content.json")))
+      (if (> exit 1)
+          (error "Failed to unarchive the xmind file %s: unzip exited with %d"
+                 file exit)
+        (goto-char (point-min))
+        (json-parse-buffer :array-type 'list
+                           :object-type 'hash-table
+                           :null-object nil)))))
 
 (cl-defun xmind-org-root-node (doc &optional (tab 0))
   "Given a JSON content document, return its root node as `xmind-org-node'.
