@@ -1,0 +1,5 @@
+# Copied from the template
+justfile linguist-vendored
+
+# Lock files
+.rice-lock/** linguist-generated

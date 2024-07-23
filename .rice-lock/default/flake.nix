@@ -26,12 +26,6 @@
       repo = "s.el";
       type = "github";
     };
-    xmind-org = {
-      flake = false;
-      owner = "akirak";
-      repo = "xmind-org-el";
-      type = "github";
-    };
   };
   outputs = { ... }: { };
 }

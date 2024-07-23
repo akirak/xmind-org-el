@@ -3,11 +3,11 @@
     "buttercup": {
       "flake": false,
       "locked": {
-        "lastModified": 1660513857,
-        "narHash": "sha256-hOi6NUY/seKhBA32X1PhP+O+Q1PVyfeoB2BB7i2C1fc=",
+        "lastModified": 1721261696,
+        "narHash": "sha256-7K4QtQnrO6uB7laTpwfNrq/foAnIveGEia/RK8Q28+0=",
         "owner": "jorgenschaefer",
         "repo": "emacs-buttercup",
-        "rev": "e2b77ac49cc61c32566f22b84ba304a5703ff7b3",
+        "rev": "dfbef2177209e3a045e981b7d2956ec46ce3b25b",
         "type": "github"
       },
       "original": {
@@ -19,11 +19,11 @@
     "dash": {
       "flake": false,
       "locked": {
-        "lastModified": 1654716693,
-        "narHash": "sha256-ggJV5lX2F5T4FajFX8h3hT7YPZ2F11HDDeV9va8bJVI=",
+        "lastModified": 1715347628,
+        "narHash": "sha256-at42NCcdF9g7a55asnOCSqsvG+XhWuvVsHFT6kU9f9o=",
         "owner": "magnars",
         "repo": "dash.el",
-        "rev": "0ac1ecf6b56eb67bb81a3cf70f8d4354b5782341",
+        "rev": "1de9dcb83eacfb162b6d9a118a4770b1281bcd84",
         "type": "github"
       },
       "original": {
@@ -35,11 +35,11 @@
     "org-ml": {
       "flake": false,
       "locked": {
-        "lastModified": 1657553317,
-        "narHash": "sha256-N8HdBql05TX2wV+tSos8A2XW7goEPEXSj8k9Oi41oEg=",
+        "lastModified": 1681086652,
+        "narHash": "sha256-BBbwBh+G3hb1HP493Y57K19iNdRAuogeh0XBGZsbQJo=",
         "owner": "ndwarshuis",
         "repo": "org-ml",
-        "rev": "385e3bee497f858705144d7ab5e6570d31d3ffe8",
+        "rev": "f57336a9126a168ad32ccce017c072474555395a",
         "type": "github"
       },
       "original": {
@@ -53,39 +53,22 @@
         "buttercup": "buttercup",
         "dash": "dash",
         "org-ml": "org-ml",
-        "s": "s",
-        "xmind-org": "xmind-org"
+        "s": "s"
       }
     },
     "s": {
       "flake": false,
       "locked": {
-        "lastModified": 1662132008,
-        "narHash": "sha256-rB+b9Z2KISHwYIgXm2g2EX/EUpA9NWDFfuzrj93dzAc=",
+        "lastModified": 1681482914,
+        "narHash": "sha256-fbF/SyPwEiJICaPBq0xWj2yLWjdNwkaLF2iYvZ2EO1k=",
         "owner": "magnars",
         "repo": "s.el",
-        "rev": "e957dcb0677da18b2bb60ad867db5df5c35b5616",
+        "rev": "dda84d38fffdaf0c9b12837b504b402af910d01d",
         "type": "github"
       },
       "original": {
         "owner": "magnars",
         "repo": "s.el",
-        "type": "github"
-      }
-    },
-    "xmind-org": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1662555546,
-        "narHash": "sha256-hR3AV4gs0DDfQs98V37LlpUj/AfqCzqZRDP+bcKEc20=",
-        "owner": "akirak",
-        "repo": "xmind-org-el",
-        "rev": "94fedfd851fd6a3698be921562022491558fae4a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "akirak",
-        "repo": "xmind-org-el",
         "type": "github"
       }
     }
