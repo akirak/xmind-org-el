@@ -51,9 +51,7 @@
 (defun xmind-org-parse-content (file)
   "Parse the content of a mindmap FILE."
   (with-temp-buffer
-    (let ((exit (call-process xmind-org-unzip-command nil
-                              (cons t nil)
-                              nil
+    (let ((exit (call-process xmind-org-unzip-command nil (list t nil) nil
                               "-p"
                               (convert-standard-filename file)
                               "content.json")))
